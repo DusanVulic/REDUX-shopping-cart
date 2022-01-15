@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand";
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 0.1rem;
+    /* text-transform: capitalize; */
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: hsl(210, 22%, 49%);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+
+/*  global classes */
+
+
+/* section */
+
+.section {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+    .section {
+        width: 95vw;
+    }
+}
+
+
+/*
+=============== 
+Navbar
+===============
+*/
+
+nav {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header {
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+.nav-header span {
+    font-size: 1.10rem;
+    font-weight: bold;
+}
+
+.shopping-cart {
+    position: relative;
+    display: block;
+}
+
+.cart {
+    font-size: 2rem;
+    color: rgb(9, 133, 155);
+}
+
+.amount-container {
+    position: absolute;
+    top: 0.5rem;
+    left: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background: rgb(9, 133, 155);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.amount {
+    color: white;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-header span {
+        color: rgb(9, 133, 155);
+        font-size: 1.5rem;
+    }
+}
+
+
+/*
+=============== 
+Cart Container
+===============
+*/
+
+.cart-container {
+    min-height: calc(100vh - 110px);
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 3rem;
+    text-align: center;
+}
+
+.cart-total {
+    padding: 2rem;
+    display: flex;
+    max-width: 1000px;
+    justify-content: space-between;
+}
+
+.clear-btn {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    color: rgb(9, 133, 155);
+    ;
+    border: 1px solid rgb(9, 133, 155);
+    ;
+    margin-top: 2.25rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.clear-btn:hover {
+    background: rgb(9, 133, 155);
+    ;
+    color: white;
+}
+
+
+/*
+=============== 
+Cart Item
+===============
+*/
+
+.cart-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.cart-item img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.cart-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.cart-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: rgb(9, 133, 155);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-size: 1rem;
+}
+
+.remove-btn:hover {
+    color: blueviolet;
+}
+
+.amount-btn {
+    color: rgb(9, 133, 155);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.amount-btn:hover {
+    color: blueviolet;
+}
+
+
+/*
+=============== 
+footer
+===============
+*/
+
+.footer {
+    height: 50px;
+    background: rgb(9, 133, 155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer span {
+    color: white;
+    margin: 0 0.25rem;
+}
+
+.icon {
+    margin: 0 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
